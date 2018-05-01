@@ -60,7 +60,6 @@ class DataBase {
 				$pdo = new PDO('mysql:dbname='.$this->db_name.';host='.$this->db_host.':'.$this->db_port, $this->db_user, $this->db_pass);
 				$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			} catch (Exception $e) {
-
 				die('Une erreur est survenue lors de la connexion à la base de données.');
 			}
 			$this->pdo = $pdo;
